@@ -3,7 +3,6 @@ package com.quarterlife.convenientbanner;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.Toast;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
@@ -13,7 +12,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener {
     private ConvenientBanner convenientBanner;
-    private ImageView img_test;
 
     // 網路圖片
     private List<String> bannerList;
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
                 // 設定自動切換（同時設定切換的時間間隔）
                 .startTurning(2000)
                 // 設定兩個點圖片作為翻頁指示器，不設定則沒有指示器，可以根據自己需求自行配合自己的指示器，不需要圓點指示器可不設
-                .setPageIndicator(new int[]{R.drawable.circle_white_8, R.drawable.circle_blue_8})
+                .setPageIndicator(new int[]{R.drawable.indicator_circle_white_8, R.drawable.indicator_circle_blue_8})
                 // 設定指示器的方向（左、中、右）
                 .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL)
                 // 設定點選監聽事件
